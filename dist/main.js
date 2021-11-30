@@ -1,0 +1,1 @@
+(()=>{"use strict";const o="wash dogs",s="tomorrow";console.log(o),console.log(s)})();
