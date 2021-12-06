@@ -4,9 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../src/style.css">
     <title>To-Do</title>
 </head>
 <body>
+    <div id='header'>
+        <div>TO-DO</div>
+        <button id='addbutton'>Add</button>
+    </div>
+    <div id='container'>
+        <div id='sidebar'></div>
+        <div id='main'></div>
+    </div>
+
+    <div id="modal">
+        <div id="formpopup">
+          <form id='form' method="post">
+              <div id="leftside">
+                  <label for="formtitle">Title:</label>
+                  <input type="text" id="formtitle" name="formtitle"><br>
+                  <label for="formdate">Due Date:</label>
+                  <input type="text" id="formdate" name="formdate"><br>
+                  <label for="formpriority">Priority Level:</label>
+                  <select id="priorities" name="priorities">
+                    <option value="high">High Priority</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low Priority</option>
+                  </select>
+                  <input type="submit" value="Add" id="formSubmit" onclick="submitForm(event)">
+              </div>
+              <div><button id="close">x</button></div>
+          </form>
+        </div>
+      </div>
 
     <script src="main.js"></script>
     
