@@ -15,14 +15,20 @@ body {
 
 #container {
     border: 1px solid red;
+    display: flex;
+    flex-direction: row;
 }
 
 #sidebar {
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
+    width: 300px;
+    height: 400px;
 }
 
 #main {
+    border: 2px solid black;
 
 }
 

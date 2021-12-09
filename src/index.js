@@ -1,6 +1,7 @@
 import { todoFactory } from './todoFactory.js';
 import { displayPopup } from './displayForm.js';
 import { addToDo } from './addToDo.js';
+import { populateSidebar } from './populateSidebar.js';
 
 //const newtodo = todoFactory('wash dogs', 'tomorrow', 'big priority');
 
@@ -25,8 +26,9 @@ const formbutton = document.querySelector('#formSubmit');
 formbutton.addEventListener('click', event => {
     event.preventDefault;
     addToDo(general);
-    console.log(general);
 });
+
+populateSidebar();
 
 
 
