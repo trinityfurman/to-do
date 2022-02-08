@@ -1,4 +1,5 @@
 import { projectFactory } from "./projectFactory";
+import { createSelect } from "./createSelect";
 
 const addProject = (category) => {
     if (document.getElementById('projecttitle').value == "") {
@@ -6,6 +7,7 @@ const addProject = (category) => {
     } else {
         const newProject = projectFactory(document.getElementById('projecttitle').value, []);
         category.push(newProject);
+        createSelect(document.getElementById('projecttitle').value);
     }
 };
 
