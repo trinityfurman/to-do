@@ -13,7 +13,10 @@
         <button id='addbutton'>Add</button>
     </div>
     <div id='container'>
-        <div id='sidebar'></div>
+        <div id='sidebar'>
+            <button id='projectbutton'>+</button>
+            <div id='sidebarBody'></div>
+        </div>
         <div id='main'></div>
     </div>
 
@@ -32,6 +35,19 @@
                     <option value="low">Low Priority</option>
                   </select>
                   <input type="submit" value="Add" id="formSubmit">
+              </div>
+              <div><button id="close">x</button></div>
+          </form>
+        </div>
+      </div>
+
+      <div id="modalTwo">
+        <div id="projectpopup">
+          <form id='projectform' method="post">
+              <div class="leftside">
+                  <label for="projecttitle">New Project Title: </label>
+                  <input type="text" id="projecttitle" name="projecttitle"><br>
+                  <input type="submit" value="Add" id="projectSubmit">
               </div>
               <div><button id="close">x</button></div>
           </form>

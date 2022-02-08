@@ -1,13 +1,13 @@
 
 
-const displayTodos = (projectArray, projectIndex) => {
-    const thisArray = projectArray[projectIndex];
-    console.log('working');
+const displayTodos = (project) => {
+
     const body = document.querySelector('#main');
     while (body.firstChild) {
       body.removeChild(body.firstChild);
     }
-     thisArray.forEach(todo => {
+    console.log('working okay');
+     project.todos.forEach(todo => {
 
         const div = document.createElement('div');
         div.textContent = todo.title;
