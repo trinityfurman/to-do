@@ -33,7 +33,7 @@ let projectArray = [];
 //let projectTitles = [];
 
 // Create first project object: 'general'
-const general = projectFactory('general', []);
+const general = projectFactory('General', []);
 
 projectArray.push(general);
 
@@ -64,7 +64,9 @@ formbutton.addEventListener('click', function(event) {
 
     // Keep track of how many items are added (just to test)
     number++;
-    addToDo(projectArray[0].todos);
+    //addToDo(projectArray[0].todos);
+
+    addToDo(projectArray);
 
     console.log(number);
     console.log(projectArray[0].todos);

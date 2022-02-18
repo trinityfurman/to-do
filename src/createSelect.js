@@ -10,6 +10,7 @@ const createSelect = (title) => {
     }) ;*/
     let option = document.createElement('option');
     option.text = title;
+    option.value = title;
     select.add(option);
 
 };

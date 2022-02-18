@@ -11,6 +11,13 @@ const displayTodos = (project) => {
 
         const div = document.createElement('div');
         div.textContent = todo.title;
+        const deletebutton = document.createElement('div');
+        deletebutton.textContent = 'x';
+        deletebutton.addEventListener('click', function() {
+          todo.delete();
+        });
+        div.appendChild(deletebutton);
+
 
         body.appendChild(div);
      });
