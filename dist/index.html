@@ -5,16 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@600&display=swap" rel="stylesheet">
     <title>To-Do</title>
 </head>
 <body>
     <div id='header'>
-        <div>TO-DO</div>
-        <button id='addbutton'>Add</button>
+        <div>To-Do</div>
+        <button id='addbutton'>+</button>
     </div>
     <div id='container'>
         <div id='sidebar'>
-            <button id='projectbutton'>+</button>
+            <div id='sidebarHeader'>
+                <div id='sidebarText'>Projects</div>
+                <button id='projectbutton'>+</button>
+            </div>  
             <div id='sidebarBody'></div>
         </div>
         <div id='main'></div>
@@ -23,7 +29,8 @@
     <div id="modal">
         <div id="formpopup">
           <form id='form' method="post">
-              <div id="leftside">
+              <div class='formcontainer'>
+                <div id="leftside">
                   <label for="formtitle">Title:</label>
                   <input type="text" id="formtitle" name="formtitle"><br>
                   <label for="formdate">Due Date:</label>
@@ -39,9 +46,10 @@
                       <option> General </option>
                   </select>
 
-                  <input type="submit" value="Add" id="formSubmit">
-              </div>
-              <div><button id="close">x</button></div>
+                  <input type="submit" value="Add" id="formSubmit" class="submitButton">
+                </div>
+                <div><button class="submitButton">x</button></div>
+            </div>
           </form>
         </div>
       </div>
@@ -49,12 +57,14 @@
       <div id="modalTwo">
         <div id="projectpopup">
           <form id='projectform' method="post">
+            <div class='formcontainer'>
               <div class="leftside">
                   <label for="projecttitle">New Project Title: </label>
                   <input type="text" id="projecttitle" name="projecttitle"><br>
-                  <input type="submit" value="Add" id="projectSubmit">
+                  <input type="submit" value="Add" id='projectSubmit' class="submitButton">
               </div>
-              <div><button id="close">x</button></div>
+              <div><button class="submitButton">x</button></div>
+            </div>
           </form>
         </div>
       </div>
