@@ -7,7 +7,7 @@ body {
 }
 
 #header {
-    border: 1px black solid;
+    border: 1px #bf4b60;
     height: 40px;
     display: flex;
     flex-direction: row;
@@ -41,7 +41,7 @@ body {
 #sidebar {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 2px solid#bf4b60;
     width: 300px;
     height: 400px;
 }
@@ -52,7 +52,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    border: 1px solid green;
+    border-bottom: 2px solid #21735E;
 }
 
 #sidebarText {
@@ -63,7 +63,7 @@ body {
 }
 
 #main {
-    border: 2px solid blue;
+    border: 2px solid #bf4b60;
     width: 100%;
     padding: 10px;
 
