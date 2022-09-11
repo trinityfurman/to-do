@@ -1,7 +1,7 @@
 import { displayTodos } from "./displayTodos";
 
-const todoFactory = (title, date, priority, project, projectlist) => {
-    return { title, date, priority, project, projectlist,
+const todoFactory = (title, date, priority, project, projectlist, notes) => {
+    return { title, date, priority, project, projectlist, notes,
         delete() {
             const thisProject = projectlist.find(entry => entry.title == project);
             //const thisProject = projectlist.find(function(project) {

@@ -35,63 +35,50 @@ let projectArray = [];
 // Create first project object: 'general'
 const general = projectFactory('General', []);
 
+// Add general project to project array
 projectArray.push(general);
 
 
 
-
-
-let number = -1;
-
-
+// Display popup when add button is clicked
 const addbutton = document.querySelector('#addbutton');
-
 addbutton.addEventListener("click", displayPopup);
 
 const formbutton = document.querySelector('#formSubmit');
 
+// Display popup when project button is clicked
 const projectbutton = document.querySelector('#projectbutton');
-
 projectbutton.addEventListener('click', displayPopup2);
 
 const projectsubmit = document.querySelector('#projectSubmit');
 
 
-// Add todo to 'general' array when clicked
+// Add new todo to 'general' array when clicked
 formbutton.addEventListener('click', function(event) {
 
     event.preventDefault();
 
-    // Keep track of how many items are added (just to test)
-    number++;
-    //addToDo(projectArray[0].todos);
-
     addToDo(projectArray);
 
-    console.log(number);
-    console.log(projectArray[0].todos);
     hidePopup();
 
     const thisForm = document.getElementById("form");
     thisForm.reset();
 }); 
 
+// Add new project when clicked
 projectsubmit.addEventListener('click', function(event) {
     event.preventDefault();
 
     addProject(projectArray);
-    console.log(projectArray[1]);
 
     hidePopup2();
 
     const thisForm = document.getElementById("projectform");
     thisForm.reset();
 
-    //repopulate sidebar w new project title
-
+    //Repopulate sidebar with new project title
     populateSidebar(projectArray);
-
-
 });
 
 populateSidebar(projectArray);
